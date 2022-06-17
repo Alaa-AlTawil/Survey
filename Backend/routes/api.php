@@ -28,3 +28,4 @@ Route::group([
     Route::post('/addsurvey', [SurveyController::class, 'addSurv']);
     Route::post('/getsurveybyid', [SurveyController::class, 'getSurvById']);
     Route::get('/getallsurveys', [SurveyController::class, 'getAllSurv']);
+    Route::post('/getsurveyanswers', [SurveyController::class, 'getSurvAns']);
