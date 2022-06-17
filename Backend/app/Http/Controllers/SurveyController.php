@@ -22,4 +22,12 @@ class SurveyController extends Controller
             "category" => $result,
         ],200);
     }
+
+    function getAllSurv(Request $request){
+        $result=Survey::all();
+        return response()->json([
+            "status" => "Success",
+            "category" => $result,
+        ],200);
+    }
 }
