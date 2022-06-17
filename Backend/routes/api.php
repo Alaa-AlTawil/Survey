@@ -22,3 +22,5 @@ Route::group([
     Route::post('/getquesofsurv', [QuestionController::class, 'getQuesOfSurv']);
 
     Route::post('/addanswer', [AnswerController::class, 'addAns']);
+    Route::post('/getanswer',[AnswerController::class, 'getAns']);
+    

@@ -16,4 +16,11 @@ class AnswerController extends Controller
         return response()->json([
             "status" => "success"],200);
     }
+    function getAns(Request $request){
+        $result=Answer::where('ques_id',$request->qid)->get();
+        return response()->json([
+            "status" => "Success",
+            "category" => $result,
+        ],200);
+    }
 }
