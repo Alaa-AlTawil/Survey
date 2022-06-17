@@ -2,6 +2,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\QuestionController;
 
 Route::group([
     'middleware' => 'api',
@@ -14,6 +15,6 @@ Route::group([
     Route::get('/user-profile', [AuthController::class, 'userProfile']);    
 });
 
-    
+    Route::post('/addquesoption', [QuestionController::class, 'addQuesOption']);
 
 
