@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\SurveyController;
 
 Route::group([
     'middleware' => 'api',
@@ -23,4 +24,6 @@ Route::group([
 
     Route::post('/addanswer', [AnswerController::class, 'addAns']);
     Route::post('/getanswer',[AnswerController::class, 'getAns']);
-    
+
+    Route::post('/addsurvey', [SurveyController::class, 'addSurv']);
+    Route::post('/getsurveybyid', [SurveyController::class, 'getSurvById']);
