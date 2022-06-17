@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
+            $table->string('answer');
+            $table->integer('user_id');
+            $table->integer('ques_id');
+            $table->integer('surv_id');
             $table->timestamps();
         });
     }
