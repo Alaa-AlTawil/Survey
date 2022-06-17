@@ -38,4 +38,11 @@ class QuestionController extends Controller
             "status" => "success"],200);
 
     }
+    function getQuesOfSurv(Request $request){
+        $result=Question::where('surv_id',$request->sid)->get();
+        return response()->json([
+            "status" => "Success",
+            "category" => $result,
+        ],200);
+    }
 }
