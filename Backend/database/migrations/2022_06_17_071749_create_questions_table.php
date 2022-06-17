@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-                     
+            $table->string('content');
+            $table->integer('ques_option_id');
+            $table->integer('ques_type_id');
+            $table->integer('surv_id');            
             $table->timestamps();
         });
     }
