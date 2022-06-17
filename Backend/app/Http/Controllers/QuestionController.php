@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Question_option;
+use App\Models\Question_type;
 
 class QuestionController extends Controller
 {
@@ -15,4 +16,7 @@ class QuestionController extends Controller
         return response()->json([
             "status" => "success"],200);
     }
+
+    
+ 
 }
