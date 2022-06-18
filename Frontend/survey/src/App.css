@@ -79,4 +79,8 @@
   color: white;
   border: 0;
   border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover{
+  opacity: 90%;
 }
