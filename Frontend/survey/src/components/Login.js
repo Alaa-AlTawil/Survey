@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from './Button'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom';
 
 
@@ -27,7 +26,7 @@ function Login() {
             <h1>Login</h1>
                 <div><input id="email" type={'Email'} placeholder='Email'/></div>
                 <div><input id="password" type={'Password'} placeholder='password'/></div>
-                <div><Button text={'login'} onclick={()=>{loginfunction()}} /></div>
+                <div><Button className="btn" text={'login'} onclick={()=>{loginfunction()}} /></div>
                 
         </div>
     );
