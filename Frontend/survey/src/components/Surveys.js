@@ -5,12 +5,13 @@ import {useNavigate} from 'react-router-dom';
 
 function Surveys() {
     const navigate = useNavigate();
+    
     return (
         <div>
         <Button className={'btn'} text={'Create Survey'} onclick={ ()=>{
             navigate('./addsurvey')
         }}/>
-        <div className='Container'>
+        <div id='Container'>
             <Survey name='survey1'/>
             <Survey name='survey2'/>
             <Survey name='survey3'/>

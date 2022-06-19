@@ -13,7 +13,7 @@ function Login() {
         password:password.value})
         .then(res => {
           console.log(res.data["user"]["type"]);
-          if (res.data["user"]["type"]=="admin"){
+          if (res.data["user"]["type"]==="admin"){
             navigate('/home')
           }
           else{navigate('/user')

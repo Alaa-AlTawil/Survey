@@ -27,5 +27,6 @@ Route::group([
 
     Route::post('/addsurvey', [SurveyController::class, 'addSurv']);
     Route::post('/getsurveybyid', [SurveyController::class, 'getSurvById']);
+    Route::post('/delsurveybyid', [SurveyController::class, 'delSurvById']);
     Route::get('/getallsurveys', [SurveyController::class, 'getAllSurv']);
     Route::post('/getsurveyanswers', [SurveyController::class, 'getSurvAns']);
