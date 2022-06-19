@@ -7,7 +7,7 @@ import AdminQuestions from './components/AdminQuestions'
 import AddSurvey from './components/AddSurvey'
 import AddQuestions from './components/AddQuestions';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-
+import Option from './components/Option'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route path="/questions" element={<Questions/>}></Route>
         <Route path="/surveyquestion" element={<AdminQuestions/>}></Route>
         <Route path="/addQuestions" element={<AddQuestions/>}></Route>
+        <Route path="/option" element={<Option/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>

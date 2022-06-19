@@ -9,7 +9,7 @@ function AddSurvey() {
         var name=document.getElementById("surveyname")
         axios.post(`http://127.0.0.1:8000/api/addsurvey`, {name:name.value,})
         .then(res => {
-            console.log("success")
+            localStorage.setItem("surveyid",res.data["survey"]["id"])
             navigate('/addQuestions')
             
             

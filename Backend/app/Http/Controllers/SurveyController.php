@@ -13,7 +13,9 @@ class SurveyController extends Controller
         $add->name=$request->name;
         $add->save();
         return response()->json([
-            "status" => "success"],200);
+            "status" => "success",
+            "survey" => $add
+        ],200);
 
     }
     function getSurvById(Request $request){

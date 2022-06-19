@@ -30,12 +30,14 @@ class QuestionController extends Controller
     function addQues(Request $request){
         $ques=new Question;
         $ques->content=$request->content;
-        $ques->ques_option_id=$request->qoid;
+        //$ques->ques_option_id=$request->qoid;
         $ques->ques_type_id=$request->qtid;
         $ques->surv_id=$request->sid;
         $ques->save();
         return response()->json([
-            "status" => "success"],200);
+            "status" => "success",
+            "question"=>$ques
+        ],200);
 
     }
     function getQuesOfSurv(Request $request){
