@@ -8,6 +8,10 @@ import axios from 'axios';
 function Surveys() {
     const navigate = useNavigate();
     const [arr, setarr] = useState([]);
+    function questions(n){
+        localStorage.setItem("survey_id",n)
+        navigate('/surveyquestion')
+   }
     function getsurveys(){ 
      axios.get(`http://127.0.0.1:8000/api/getallsurveys`)
         .then(res => {
@@ -25,7 +29,7 @@ function Surveys() {
         <div id='Container' >
             {arr.map((value,index)=>{
                     return (
-                        <Survey key={index} name={value["name"]} id={value["id"]} />
+                        <Survey key={index} name={value["name"]} id={value["id"]} click={()=>{questions(value["id"])}}/>
                     )})}
         </div>
         </div>

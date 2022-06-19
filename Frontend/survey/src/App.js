@@ -3,8 +3,10 @@ import Login from './components/Login'
 import Home from './components/Home'
 import User from './components/User'
 import Questions from './components/Questions'
+import AdminQuestions from './components/AdminQuestions'
 import AddSurvey from './components/AddSurvey'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path="/user" element={<User/>}></Route> 
         <Route path="/home/addsurvey" element={<AddSurvey/>}></Route>
         <Route path="/questions" element={<Questions/>}></Route>
+        <Route path="/surveyquestion" element={<AdminQuestions/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>
