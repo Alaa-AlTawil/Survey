@@ -13,8 +13,8 @@ function Survey(props) {
 
     }
     return (
-        <div className='survey' onClick={props.click}>
-            <div className="main_survey" >
+        <div className='survey' >
+            <div className="main_survey" onClick={props.click}>
                 {props.name}
             </div>
             <div className="remove">

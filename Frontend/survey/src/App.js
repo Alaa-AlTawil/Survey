@@ -5,6 +5,7 @@ import User from './components/User'
 import Questions from './components/Questions'
 import AdminQuestions from './components/AdminQuestions'
 import AddSurvey from './components/AddSurvey'
+import AddQuestions from './components/AddQuestions';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home/addsurvey" element={<AddSurvey/>}></Route>
         <Route path="/questions" element={<Questions/>}></Route>
         <Route path="/surveyquestion" element={<AdminQuestions/>}></Route>
+        <Route path="/addQuestions" element={<AddQuestions/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>
