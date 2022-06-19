@@ -12,7 +12,6 @@ function Login() {
         await axios.post(`http://127.0.0.1:8000/api/auth/login`, {email:email.value, 
         password:password.value})
         .then(res => {
-          console.log(res.data["user"]["type"]);
           if (res.data["user"]["type"]==="admin"){
             navigate('/home')
           }

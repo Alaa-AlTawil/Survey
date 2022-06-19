@@ -1,25 +1,34 @@
-import React from 'react';
+import { React, useState, useEffect } from "react";
 import Survey from './Survey';
 import Button from './Button';
 import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
+
 
 function Surveys() {
     const navigate = useNavigate();
+    const [arr, setarr] = useState([]);
+    function getsurveys(){ 
+     axios.get(`http://127.0.0.1:8000/api/getallsurveys`)
+        .then(res => {
+            setarr(res.data["category"])
+
+        })}
+    useEffect(()=>{getsurveys()},[])   
+    
     
     return (
         <div>
-        <Button className={'btn'} text={'Create Survey'} onclick={ ()=>{
+            <Button className={'btn'} text={'Create Survey'}  onclick={ ()=>{
             navigate('./addsurvey')
         }}/>
-        <div id='Container'>
-            <Survey name='survey1'/>
-            <Survey name='survey2'/>
-            <Survey name='survey3'/>
-            <Survey name='survey4'/>
-            <Survey name='survey5'/>
+        <div id='Container' >
+            {arr.map((value,index)=>{
+                    return (
+                        <Survey key={index} name={value["name"]} id={value["id"]} />
+                    )})}
         </div>
         </div>
-     );
-}
+     );}
 
 export default Surveys;
