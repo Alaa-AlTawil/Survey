@@ -2,17 +2,15 @@ import UserSurvey from './UserSurvey';
 import axios from 'axios';
 import { React, useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
-
 function UserSurveys() {
     const navigate = useNavigate();
-    function loginfunction(n){
+    function questions(n){
         localStorage.setItem("id",n)
         navigate('/questions')
-
    }
     const [arr, setarr] = useState([]);
-   function getsurveys(){ 
-    axios.get(`http://127.0.0.1:8000/api/getallsurveys`)
+    function getsurveys(){ 
+     axios.get(`http://127.0.0.1:8000/api/getallsurveys`)
         .then(res => {
             setarr(res.data["category"])
 
@@ -24,7 +22,7 @@ function UserSurveys() {
             {
                 arr.map((value,index)=>{
                     return (
-                        <UserSurvey key={index} name={value["name"]} id={value["id"]} onclick={()=>{loginfunction(value["id"])}}/>
+                        <UserSurvey key={index} name={value["name"]} id={value["id"]} click={()=>{questions(value["id"])}}/>
                     )
                 })
             }
