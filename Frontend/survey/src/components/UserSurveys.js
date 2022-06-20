@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom';
 function UserSurveys() {
     const navigate = useNavigate();
     function questions(n){
-        localStorage.setItem("id",n)
+        localStorage.setItem("survid",n)
         navigate('/questions')
    }
     const [arr, setarr] = useState([]);
