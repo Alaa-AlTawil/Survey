@@ -13,7 +13,7 @@ function Options() {
     return ( <div>
         <Header/>
         <div >
-            <input type="text" id="options"/>
+            <input type="text" id="options" placeholder='your options'/>
             <Button text="add" onclick={()=>{
                 AddOption()
             }}/>

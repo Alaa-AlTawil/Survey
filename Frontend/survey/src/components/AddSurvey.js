@@ -20,7 +20,7 @@ function AddSurvey() {
     return ( <div>
         <Header/>
         <div>
-            <input type="text"  id="surveyname"/>
+            <input type="text"  id="surveyname" placeholder='survey name'/>
             <Button className="btn" text="Add" onclick={()=>{
                 AddSurvey()
             }}/>
