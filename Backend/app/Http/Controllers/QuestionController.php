@@ -47,4 +47,11 @@ class QuestionController extends Controller
             "category" => $result,
         ],200);
     }
+    function getQuesOptions(Request $request){
+        $result=Question_option::where('ques_id',$request->qid)->get();
+        return response()->json([
+            "status" => "Success",
+            "category" => $result,
+        ],200);
+    }
 }

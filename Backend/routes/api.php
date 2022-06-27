@@ -21,6 +21,7 @@ Route::group([
     Route::post('/addquestype', [QuestionController::class, 'addQuesType']);
     Route::post('/addques', [QuestionController::class, 'addQues']);
     Route::post('/getquesofsurv', [QuestionController::class, 'getQuesOfSurv']);
+    Route::post('/getquesoptions', [QuestionController::class, 'getQuesOptions']);
 
     Route::post('/addanswer', [AnswerController::class, 'addAns']);
     Route::post('/getanswer',[AnswerController::class, 'getAns']);
