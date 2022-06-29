@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import Header from "./Header";
 import axios from "axios";
 import Qoptions from "./Qoptions";
+import Button from "./Button";
  function Questions() {
   const [arr, setarr] = useState([]);
 
@@ -20,9 +21,12 @@ import Qoptions from "./Qoptions";
           <div key={arritem.id}>
             <div id={arritem.id}>{arritem.content}</div>
             <Qoptions qid={arritem.id} qtype={arritem.ques_type_id}/>
+            
           </div>
         ))}
       </div>
+     
+      
     </div>
   );
 }

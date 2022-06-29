@@ -12,6 +12,7 @@ function Login() {
         await axios.post(`http://127.0.0.1:8000/api/auth/login`, {email:email.value, 
         password:password.value})
         .then(res => {
+          localStorage.setItem("userid",res.data["user"]["id"])
           if (res.data["user"]["type"]==="admin"){
             navigate('/home')
           }
