@@ -29,15 +29,32 @@ function Qoptions({ qid, qtype }) {
         sid: localStorage.getItem("survid"),
         qid: qid,
         uid: localStorage.getItem("userid")
-      })}
+      },
+      document.getElementById("answer").value=" "
+      )}
    /// })
     return (
       <div>
         <input type="text" id="answer"/>
-        <Button onclick={()=>{submit_One()}}/>
+        <Button text="submit" onclick={()=>{submit_One()}}/>
       </div>
     );
   } else if (qtype == 2) {
+    function submit_Two(){ 
+        const a=document.getElementsByName(qid) 
+        for (let e of a){
+            if (e.checked){
+                axios
+                .post(`http://127.0.0.1:8000/api/addanswer`, {
+                  answer:e.value ,
+                  sid: localStorage.getItem("survid"),
+                  qid: qid,
+                  uid: localStorage.getItem("userid")
+                }
+                )}
+            }
+        }
+       
     return (
       <div>
         <div>
@@ -49,7 +66,7 @@ function Qoptions({ qid, qtype }) {
           ))}
         </div>
         <div>
-          <Button text="submit" id={qid}  />
+        <Button text="submit" onclick={()=>{submit_Two()}}/>
         </div>
       </div>
     );
