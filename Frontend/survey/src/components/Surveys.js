@@ -9,7 +9,7 @@ function Surveys() {
     const navigate = useNavigate();
     const [arr, setarr] = useState([]);
     function questions(n){
-        localStorage.setItem("survey_id",n)
+        localStorage.setItem("survid",n)
         navigate('/surveyquestion')
    }
     function getsurveys(){ 

@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import Header from "./Header";
 import axios from "axios";
+import '../App.css';
 import Qoptions from "./Qoptions";
 import Button from "./Button";
 import Answer from "./Answer";
@@ -19,10 +20,10 @@ import Answer from "./Answer";
   return (
     <div>
       <Header />
-      <div>
+      <div className="bottom_line_black">
         {arr.map((arritem) => (
-          <div key={arritem.id}>
-            <div id={arritem.id}>{arritem.content}</div>
+          <div key={arritem.id} >
+            <div id={arritem.id} className="bottom_line_blue">{arritem.content}</div>
             <Answer qid={arritem.id}/>            
           </div>
         ))}

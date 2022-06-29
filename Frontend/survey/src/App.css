@@ -84,3 +84,12 @@
 .btn:hover{
   opacity: 90%;
 }
+.bottom_line_black{
+  border-bottom: 5px solid #282c34;
+
+}
+
+.bottom_line_blue{
+  border-bottom: 5px solid aqua;
+
+}
