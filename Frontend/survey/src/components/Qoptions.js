@@ -34,7 +34,7 @@ function Qoptions({ qid, qtype }) {
     return (
       <div>
         <input type="text" id="answer"/>
-        <button onClick={()=>{submit_One()}}></button>
+        <Button onclick={()=>{submit_One()}}/>
       </div>
     );
   } else if (qtype == 2) {
